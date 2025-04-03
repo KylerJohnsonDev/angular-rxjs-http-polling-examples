@@ -1,22 +1,13 @@
 import { Injectable } from '@angular/core';
 import { from, map, Observable } from 'rxjs';
-import { pollEveryNMilliseconds } from './poll-every-n-milliseconds';
+import { pollEveryNMilliseconds } from '../poll-every-n-milliseconds';
 import { HttpClient } from '@angular/common/http';
-
-export interface RandomNumberResponse {
-  resultType: string
-  number: number
-  message: string
-  signature: string
-  elapsedTime: number
-  timestamp: string
-  id: string
-}
+import { RandomNumberResponse } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RandomNumberService {
+export class RandomNumberEx1Service {
 
   private readonly baseURL = '/api/random/int';
 

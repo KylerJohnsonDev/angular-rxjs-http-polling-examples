@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RandomNumberService } from './random-number.service';
+import { RandomNumberEx1Service } from './random-number-ex-1.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
@@ -21,7 +21,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   styles: ``
 })
 export class ExampleOneComponent {
-  readonly randomNumberService = inject(RandomNumberService);
+  readonly randomNumberService = inject(RandomNumberEx1Service);
   readonly randomNumber = toSignal(
     this.randomNumberService.pollRandomNumber()
   )
